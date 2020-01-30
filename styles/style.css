@@ -1,0 +1,27 @@
+html, body {
+    background: #39434d;
+    overflow-x: hidden;
+}
+
+.nav>li {
+    float: left;
+  }
+
+  
+  li.active > a {
+    border-bottom:2px solid rgb(206, 26, 26);
+ }
+
+ li > a:hover {
+    border-bottom:2px solid rgb(206, 26, 26);
+ }
+
+ .carousel-item {
+    height: 65vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }

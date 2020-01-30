@@ -1,0 +1,1 @@
+PDFObject.embed("../assets/file.pdf","#pdfcv");

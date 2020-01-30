@@ -1,0 +1,30 @@
+.container
+{
+border-top-width: 0px;
+border-top-style: solid;
+margin-top: 20px
+}
+
+.card
+{
+    height: 100%;
+}
+
+.nopadding
+{
+    padding: 0px;
+}
+.card-title
+{
+    color: #fff
+}
+
+.card-text
+{
+    color:rgba(255,255,255,.75)
+}
+
+hr {
+    border: 1px solid rgba(255,255,255,.75);
+    width: 101.2%
+  }
