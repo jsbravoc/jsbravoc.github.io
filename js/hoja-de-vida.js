@@ -6,7 +6,8 @@ const verificarMovil = function(){
     {
         let pdf = url.substring(0,index)+ "/assets/file.pdf";
         if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-        window.location.replace(pdf);
+        let nuevaPestana = window.open(pdf, "_blank");
+        nuevaPestana.focus();
     }
     else
     {
