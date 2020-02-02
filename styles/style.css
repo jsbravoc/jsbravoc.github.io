@@ -1,20 +1,36 @@
 html, body {
-    background: #39434d;
+    background: rgb(27, 26, 26);
     overflow-x: hidden;
+    font-family: 'Cairo', sans-serif;
+}
+
+#img-logo
+{
+   width:16%
+}
+
+.dropdown-menu
+{
+   position: relative !important; 
+}
+
+.navbar:not(.dropdown-menu),.bg-dark {
+   background-color: transparent;
+   background: transparent;
+   border-color: transparent;
 }
 
 .nav>li {
     float: left;
   }
 
-  
-  li.active > a {
-    border-bottom:2px solid rgb(206, 26, 26);
- }
+.lang
+{
+font-size: 10px;
+}
 
- li > a:hover {
-    border-bottom:2px solid rgb(206, 26, 26);
- }
+
+ 
 
  .carousel-item {
     height: 65vh;
@@ -25,3 +41,63 @@ html, body {
     -o-background-size: cover;
     background-size: cover;
   }
+
+  /*
+  Animación de navbar basada en snippet de LittleSnippets.net
+  https://codepen.io/littlesnippets/pen/pjmXvP
+  */
+  @import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);
+.hover {
+  font-family: 'Raleway', Arial, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 395;
+}
+
+  .hover *:not(.not-hover) {
+   box-sizing: border-box;
+   -webkit-transition: all 0.35s ease;
+   transition: all 0.35s ease;
+ }
+ .hover li {
+   display: inline-block;
+   list-style: outside none none;
+   margin: 0 0.5em;
+   overflow: hidden;
+ }
+ .hover a {
+   padding: 0.3em 0;
+   color: rgba(255, 255, 255, 0.5);
+   position: relative;
+   display: inline-block;
+   letter-spacing: 1px;
+   margin: 0;
+   text-decoration: none;
+ }
+ .hover a:before,
+ .hover a:after {
+   position: absolute;
+   -webkit-transition: all 0.35s ease;
+   transition: all 0.35s ease;
+ }
+ .hover a:before {
+   bottom: 100%;
+   display: block;
+   height: 3px;
+   width: 90%;
+   content: "";
+   background-color:  rgb(220, 46, 46);
+ }
+ .hover a:not(.not-hover):after {
+   padding: 0.3em 0;
+   position: absolute;
+   bottom: 100%;
+   left: 0.5em;
+   content: attr(data-hover);
+   color: white;
+   white-space: nowrap;
+ }
+ .hover li:hover a:not(.not-hover),
+ .hover .current a:not(.not-hover) {
+   transform: translateY(100%);
+ }
