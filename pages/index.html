@@ -14,15 +14,18 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" integrity="sha256-PHcOkPmOshsMBC+vtJdVr5Mwb7r0LkSVJPlPrp/IMpU=" crossorigin="anonymous" />
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Cairo&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../styles/style.css" />
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet" type="text/css" />
+    <!-- Typed.js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
     <!-- Icono de la página -->
     <link rel="icon" href="../assets/img/icon2.png" />
+    <!-- Javascript -->
+    <script type="module" src="../js/index.js"></script>
 </head>
 
 <nav class="navbar navbar-expand-lg navbar-dark">
@@ -74,43 +77,12 @@
     </div>
 </nav>
 <header>
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner" role="listbox">
-            <!-- Slide One - Set the background image for this slide in the line below -->
-            <div class="carousel-item active" style="background-image: url('https://source.unsplash.com/RCAhiGJsUUE/1920x1080')">
-                <div class="carousel-caption d-none d-md-block">
-                    <h3 class="display-4">First Slide</h3>
-                    <p class="lead">This is a description for the first slide.</p>
-                </div>
-            </div>
-            <!-- Slide Two - Set the background image for this slide in the line below -->
-            <div class="carousel-item" style="background-image: url('https://source.unsplash.com/wfh8dDlNFOk/1920x1080')">
-                <div class="carousel-caption d-none d-md-block">
-                    <h3 class="display-4">Second Slide</h3>
-                    <p class="lead">This is a description for the second slide.</p>
-                </div>
-            </div>
-            <!-- Slide Three - Set the background image for this slide in the line below -->
-            <div class="carousel-item" style="background-image: url('https://source.unsplash.com/O7fzqFEfLlo/1920x1080')">
-                <div class="carousel-caption d-none d-md-block">
-                    <h3 class="display-4">Third Slide</h3>
-                    <p class="lead">This is a description for the third slide.</p>
-                </div>
-            </div>
+    <div class="container">
+        <div id="typed-strings">
+            <p>Typed.js is a <strong>JavaScript</strong> library.</p>
+            <p>It <em>types</em> out sentences.</p>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
+        <span id="typed"></span>
     </div>
 </header>
 
