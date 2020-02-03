@@ -15,8 +15,8 @@ html, body {
 }
 
 .navbar:not(.dropdown-menu),.bg-dark {
-   background-color: transparent;
-   background: transparent;
+   background-color: rgb(27, 26, 26);
+   background: rgb(27, 26, 26);
    border-color: transparent;
 }
 
@@ -28,7 +28,6 @@ html, body {
 {
 font-size: 10px;
 }
-
 
  
 
@@ -48,7 +47,8 @@ font-size: 10px;
   */
   @import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);
 .hover {
-  font-family: 'Raleway', Arial, sans-serif;
+  font-size: 85%;
+  font-family: 'Open Sans', Arial, sans-serif;
   text-align: center;
   text-transform: uppercase;
   font-weight: 395;
