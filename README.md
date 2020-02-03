@@ -18,7 +18,7 @@ For the development of this website I used:
 # Prerrequisites
 The website can be accessed through this [link](https://jsbravo-sw.github.io/).
 
-However, if you are willing to download it you must download the project and deploy it in `localhost` due to CORS policy with /lib/typed.js as a file and not a online resource.
+However, if you are willing to download it you must download the project and deploy it in `localhost` due to CORS policy with `/lib/typed.js` as a file and not an online resource.
 
 
 # Screenshots
