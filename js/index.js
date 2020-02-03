@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    var typed = new Typed('#intro', {
+    let typed = new Typed('#intro', {
         stringsElement: '#typed-intro',
         typeSpeed: 35,
         startDelay: 2000,
@@ -7,9 +7,10 @@ document.addEventListener('DOMContentLoaded', function() {
         loopCount: 1,
         cursorChar: ''
     });
-    var typed2 = new Typed('#descripcion', {
-        strings: ["Soy estudiante", "Soy desarrollador Web", "Soy determinado", "Soy autodidacta"],
+    let typed2 = new Typed('#descripcion', {
+        strings: ["Soy Estudiante", "Soy Desarrollador Web", "Soy determinado", "Soy autodidacta"],
         typeSpeed: 35,
+        backSpeed: 20,
         startDelay: 2500,
         loop: true,
         loopCount: Infinity
