@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
         startDelay: 2000,
         loop: false,
         loopCount: 1,
-        cursorChar = ''
+        cursorChar: ''
     });
     var typed2 = new Typed('#descripcion', {
         strings: ["Soy estudiante", "Soy desarrollador Web", "Soy determinado", "Soy autodidacta"],
