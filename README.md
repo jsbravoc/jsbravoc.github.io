@@ -27,4 +27,4 @@ However, if you are willing to download it you must download the project and dep
 ![Screenshot3](https://raw.githubusercontent.com/jsbravo-sw/jsbravo-sw.github.io/master/assets/thumbnail/thumbnail3.png)
 ***
 # MIT License
-This project is licensed by the MIT [License](LICENSE.md).
+This project is licensed by the MIT [License](LICENSE).
