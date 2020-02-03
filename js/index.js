@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
     var typed = new Typed('#intro', {
         stringsElement: '#typed-intro',
-        typeSpeed: 8,
-        backSpeed: 8,
+        typeSpeed: 30,
         startDelay: 2000,
         loop: false,
-        loopCount: 1
+        loopCount: 1,
+        onComplete: function(self) { self.cursorChar = '' }
     });
     var typed2 = new Typed('#descripcion', {
         strings: ["Soy estudiante", "Soy desarrollador web", "Soy determinado", "Soy autodidacta"],
