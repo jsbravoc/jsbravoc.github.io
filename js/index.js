@@ -1,4 +1,4 @@
-import Typed from 'typed.js';
+import Typed from 'typed.min.js';
 
 var options = {
     strings: ['<i>First</i> sentence.', '&amp; a second sentence.'],
