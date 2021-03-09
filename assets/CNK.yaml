@@ -2,7 +2,7 @@ swagger: '2.0'
 info:
   description: >-
     API to manage CNK cryptocurrency.
-  version: 1.0.0
+  version: 2.0.0
   title: CNK Cryptocurrency
   contact:
     email: jsbravoc@gmail.com
@@ -15,11 +15,6 @@ tags:
       description: Find out more
       url: 'http://swagger.io'
   - name: cryptocurrency
-    description: Coinbase transactions (issue cryptocurrency)
-    externalDocs:
-      description: Find out more
-      url: 'http://swagger.io'
-  - name: transactions
     description: Transaction creation and management
     externalDocs:
       description: Find out more
@@ -72,16 +67,12 @@ paths:
           description: New user to add to the cryptocurrency
           required: true
           schema:
-            $ref: '#/definitions/ExtendedUserWithPrivateKey'
+            $ref: '#/definitions/ExtendedUser'
       responses:
-        '200':
-          description: Created without importing keys
-          schema:
-            $ref: '#/definitions/ExtendedUserWithPrivateKey'
         '201':
-          description: Created with imported keys
+          description: Created user.
           schema:
-            $ref: '#/definitions/ExtendedUserWithPrivateKey'
+            $ref: '#/definitions/ExtendedUser'
         '403':
           description: Unauthorized
         '405':
@@ -206,22 +197,22 @@ paths:
         - petstore_auth:
             - 'write:pets'
             - 'read:pets'
-  /transaction:
+  /cryptocurrency:
     get:
       tags:
-        - transactions
-      summary: Retrieves all transactions
+        - cryptocurrency
+      summary: Retrieves all users, lastest transactions and balance
       description: ''
-      operationId: retrieveTransactions
+      operationId: getCryptocurrency
       consumes:
         - application/json
       produces:
         - application/json
       responses:
         '200':
-          description: Retrieves all transactions
+          description: Information about the cryptocurrency flow.
           schema:
-            $ref: '#/definitions/ArrayOfExtendedTransactions'
+            $ref: '#/definitions/ArrayOfExtendedUserWithTransactions'
         '403':
           description: Unauthorized
         '405':
@@ -236,7 +227,7 @@ paths:
             - 'read:pets'
     post:
       tags:
-        - transactions
+        - cryptocurrency
       summary: Creates a new transaction
       description: ''
       operationId: addTransaction
@@ -252,10 +243,14 @@ paths:
           schema:
             $ref: '#/definitions/Transaction'
       responses:
-        '201':
-          description: Created
+        '200':
+          description: Created with supporting transactions
           schema:
             $ref: '#/definitions/ExtendedTransaction'
+        '201':
+          description: Created as a coinbase transaction
+          schema:
+            $ref: '#/definitions/ExtendedCoinbaseTransaction'
         '403':
           description: Unauthorized
         '405':
@@ -268,10 +263,10 @@ paths:
         - petstore_auth:
             - 'write:pets'
             - 'read:pets'
-  '/transaction/{id}':
+  '/cryptocurrency/{id}':
     get:
       tags:
-        - transactions
+        - cryptocurrency
       summary: Retrieves one specific transaction
       description: ''
       operationId: retrieveTransaction
@@ -304,7 +299,7 @@ paths:
             - 'read:pets'
     put:
       tags:
-        - transactions
+        - cryptocurrency
       summary: Approve or reject a transaction
       description: ''
       operationId: approveTransaction
@@ -331,68 +326,6 @@ paths:
           description: Updated transaction
           schema:
             $ref: '#/definitions/ExtendedTransaction'
-        '403':
-          description: Unauthorized
-        '405':
-          description: Invalid input
-        '500':
-          description: Internal server error
-        '503':
-          description: Sawtooth service unavailable
-      security:
-        - petstore_auth:
-            - 'write:pets'
-            - 'read:pets'
-  /cryptocurrency:
-    post:
-      tags:
-        - cryptocurrency
-      summary: Creates a coinbase (no input) transaction
-      description: ''
-      operationId: addCryptocurrency
-      consumes:
-        - application/json
-      produces:
-        - application/json
-      parameters:
-        - in: body
-          name: body
-          description: New transaction to add to the blockchain
-          required: true
-          schema:
-            $ref: '#/definitions/CoinbaseTransaction'
-      responses:
-        '201':
-          description: Created
-          schema:
-            $ref: '#/definitions/ExtendedCoinbaseTransaction'
-        '403':
-          description: Unauthorized
-        '405':
-          description: Invalid input
-        '500':
-          description: Internal server error
-        '503':
-          description: Sawtooth service unavailable
-      security:
-        - petstore_auth:
-            - 'write:pets'
-            - 'read:pets'
-    get:
-      tags:
-        - cryptocurrency
-      summary: Retrieves all users, lastest transactions and balance
-      description: ''
-      operationId: getCryptocurrency
-      consumes:
-        - application/json
-      produces:
-        - application/json
-      responses:
-        '200':
-          description: Information about the cryptocurrency flow.
-          schema:
-            $ref: '#/definitions/ArrayOfExtendedUserWithTransactions'
         '403':
           description: Unauthorized
         '405':
@@ -445,6 +378,10 @@ definitions:
         type: string
         format: string
         example: my.approver
+      signature:
+        type: string
+        format: string
+        example: b221d9dbb083a7f33428d7c2a3c3198ae925614d70210e28716ccaa7cd4ddb79
     xml:
       name: Transaction
   CoinbaseTransaction:
@@ -500,6 +437,10 @@ definitions:
         type: string
         format: string
         example: my.approver
+      signature:
+        type: string
+        format: string
+        example: b221d9dbb083a7f33428d7c2a3c3198ae925614d70210e28716ccaa7cd4ddb79
     xml:
       name: Transaction
   ExtendedTransaction:
@@ -543,6 +484,10 @@ definitions:
         type: string
         format: string
         example: my.approver
+      signature:
+        type: string
+        format: string
+        example: b221d9dbb083a7f33428d7c2a3c3198ae925614d70210e28716ccaa7cd4ddb79
     xml:
       name: Transaction
   ArrayOfExtendedTransactions:
@@ -558,6 +503,7 @@ definitions:
       - amount
       - receiver
       - valid
+      - signature
     properties:
       id:
         type: string
@@ -578,6 +524,10 @@ definitions:
       valid_thru:
         type: string
         format: date-time
+      signature:
+        type: string
+        format: string
+        example: b221d9dbb083a7f33428d7c2a3c3198ae925614d70210e28716ccaa7cd4ddb79
     xml:
       name: Transaction
   User:
