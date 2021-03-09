@@ -816,7 +816,7 @@
         "public_key": {
           "type": "string",
           "format": "string",
-          "example": 3.800772969568567e+46
+          "example": "0x06A85356DCb5b307096726FB86A78c59D38e08ee"
         }
       }
     },
@@ -843,12 +843,12 @@
         "public_key": {
           "type": "string",
           "format": "string",
-          "example": "06A85356DCb5b307096726FB86A78c59D38e08ee"
+          "example": "0x06A85356DCb5b307096726FB86A78c59D38e08ee"
         },
         "private_key": {
           "type": "string",
           "format": "string",
-          "example": 3.800772969568567e+46
+          "example": "0x06A85356DCb5b307096726FB86A78c59D38e08ee"
         }
       },
       "xml": {

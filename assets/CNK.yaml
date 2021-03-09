@@ -564,7 +564,7 @@ definitions:
       public_key:
         type: string
         format: string
-        example: 0x06A85356DCb5b307096726FB86A78c59D38e08ee
+        example: "0x06A85356DCb5b307096726FB86A78c59D38e08ee"
   ArrayOfExtendedUsers:
     type: array
     items:
@@ -582,11 +582,11 @@ definitions:
       public_key:
         type: string
         format: string
-        example: 06A85356DCb5b307096726FB86A78c59D38e08ee
+        example: "0x06A85356DCb5b307096726FB86A78c59D38e08ee"
       private_key:
         type: string
         format: string
-        example: 0x06A85356DCb5b307096726FB86A78c59D38e08ee
+        example: "0x06A85356DCb5b307096726FB86A78c59D38e08ee"
     xml:
       name: User
   ExtendedUserWithTransactions:
