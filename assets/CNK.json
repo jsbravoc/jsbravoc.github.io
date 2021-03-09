@@ -816,7 +816,7 @@
         "public_key": {
           "type": "string",
           "format": "string",
-          "example": "-----BEGIN PUBLIC KEY----- MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCj8aSmZrmLrRmXLAUd8ePfbfgP JJ127AXyiQlDMhTbKZNVG8AHD5IDDHeGdOY6LQU4VwaJepYdjS7sc3TEkgIO6fjg ks8EdG2ZP712KkdHHsw2FS+17eMwy59AnzCAOFxnaqjBc8hjrhu5cQII9b5aZnIi tie60FSULa7kdO4ynQIDAQAB -----END PUBLIC KEY-----"
+          "example": 3.800772969568567e+46
         }
       }
     },
@@ -843,12 +843,12 @@
         "public_key": {
           "type": "string",
           "format": "string",
-          "example": "-----BEGIN PUBLIC KEY----- MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCj8aSmZrmLrRmXLAUd8ePfbfgP JJ127AXyiQlDMhTbKZNVG8AHD5IDDHeGdOY6LQU4VwaJepYdjS7sc3TEkgIO6fjg ks8EdG2ZP712KkdHHsw2FS+17eMwy59AnzCAOFxnaqjBc8hjrhu5cQII9b5aZnIi tie60FSULa7kdO4ynQIDAQAB -----END PUBLIC KEY-----"
+          "example": "06A85356DCb5b307096726FB86A78c59D38e08ee"
         },
         "private_key": {
           "type": "string",
           "format": "string",
-          "example": "-----BEGIN RSA PRIVATE KEY----- MIICXAIBAAKBgQCj8aSmZrmLrRmXLAUd8ePfbfgPJJ127AXyiQlDMhTbKZNVG8AH D5IDDHeGdOY6LQU4VwaJepYdjS7sc3TEkgIO6fjgks8EdG2ZP712KkdHHsw2FS+1 7eMwy59AnzCAOFxnaqjBc8hjrhu5cQII9b5aZnIitie60FSULa7kdO4ynQIDAQAB AoGBAIB+ltQtU2QcaiBISkJsInQuVuxXgGuDFi5AJdha2mnkLivYsitWktR84vmp igEy5BKCcwcx45KJ46tD2tNutNkCv9iqAppTw28lhf8E4AzYbY9glz1Prg/gIiPi aJZiOK6O+f31sGkqLA3Pk1+cS7+i1ALv1TrEiKE5cTruF7rpAkEA7okSz+shs4op owxHPciJMIwEviFhOYWH88Kx/uCkEQbKYUSeb3YIKagmjxra5CXtFmZbnn74L7Uk H8zkUG9QowJBAK/ye6Xymzk6vQa7jAcQSAzrVrzxS6Y5jw5LhG0yALiWkaU0BzBO p7zDRoMLb7zLJyMnP/OLpERdbEavtjSmY78CQGglhQcuvEoterxrsfcxxWRi3fc9 j7uTp6YwTZLg9gFRG6+YTCySNkIp3pwAt62BOaDcFAiBm08JIbqYtN7Bm00CQEsv XiESo7v32rCW0gZusas7oYwJvF7it7vPD16uAFrglIo4yl2dLtZdx7LV30CYuzet XQmQgXhpR4yJJ14mP/cCQCX+3Gnc/zSvrmtMdBHPzoMyBePSSU8mD/eyib/tzpBb Xx7PKUDejxcnYHg1ozs0XFc2gt1Soq59znzIvIla3W4= -----END RSA PRIVATE KEY-----"
+          "example": 3.800772969568567e+46
         }
       },
       "xml": {
@@ -880,7 +880,7 @@
         "public_key": {
           "type": "string",
           "format": "string",
-          "example": "-----BEGIN PUBLIC KEY----- MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCj8aSmZrmLrRmXLAUd8ePfbfgP JJ127AXyiQlDMhTbKZNVG8AHD5IDDHeGdOY6LQU4VwaJepYdjS7sc3TEkgIO6fjg ks8EdG2ZP712KkdHHsw2FS+17eMwy59AnzCAOFxnaqjBc8hjrhu5cQII9b5aZnIi tie60FSULa7kdO4ynQIDAQAB -----END PUBLIC KEY-----"
+          "example": 3.800772969568567e+46
         },
         "lastest_transactions": {
           "$ref": "#/definitions/ArrayOfExtendedTransactions"
